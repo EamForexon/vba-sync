@@ -18,13 +18,13 @@ PowerShell scripts for exporting and synchronizing VBA modules in an open PowerP
 
 ## Setup
 
-1. Copy `Sync-Vba-Template.ps1` into your project folder.
+1. Clone or download this repository into your project folder. This repository includes `.vscode/tasks.json` to configure the **Ctrl+Shift+B** shortcut. If you only copy the script, also copy the `.vscode` folder.
 2. Open `Sync-Vba-Template.ps1` and set `$presentationPath` to the full path of your PowerPoint presentation.
 3. Keep the `.bas`, `.cls`, and `.frm` files you want in the project in the `vba-src` folder next to the script. The folder is created automatically if it does not exist.
 
 ## Usage
 
-Open PowerShell in the folder containing `Sync-Vba-Template.ps1`:
+To export the VBA components for the first time, open PowerShell in the folder containing `Sync-Vba-Template.ps1` and run:
 
 ```powershell
 # Export modules from the open presentation into vba-src
@@ -34,7 +34,7 @@ Open PowerShell in the folder containing `Sync-Vba-Template.ps1`:
 .\Sync-Vba-Template.ps1
 ```
 
-You can also press **Ctrl+Shift+B** in Visual Studio Code to run synchronization. This shortcut does not export modules; use `-Export` in PowerShell for that.
+After opening the project folder in Visual Studio Code, press **Ctrl+Shift+B** to synchronize. The included task runs synchronization only; use `-Export` in PowerShell to export modules.
 
 When exporting, the script will not overwrite existing source files in `vba-src`.
 
@@ -64,13 +64,13 @@ Scripts de PowerShell para exportar y sincronizar módulos VBA en una presentaci
 
 ## Configuración
 
-1. Copia `Sync-Vba-Template.ps1` en la carpeta de tu proyecto.
+1. Clona o descarga este repositorio en la carpeta de tu proyecto. El repositorio incluye `.vscode/tasks.json` para configurar el atajo **Ctrl+Shift+B**. Si solo copias el script, copia también la carpeta `.vscode`.
 2. Abre `Sync-Vba-Template.ps1` y asigna a `$presentationPath` la ruta completa de la presentación de PowerPoint.
 3. Guarda en la carpeta `vba-src`, junto al script, los archivos `.bas`, `.cls` y `.frm` que quieras mantener en el proyecto. La carpeta se crea automáticamente si no existe.
 
 ## Uso
 
-Abre PowerShell en la carpeta que contiene `Sync-Vba-Template.ps1`:
+Para exportar los componentes VBA por primera vez, abre PowerShell en la carpeta que contiene `Sync-Vba-Template.ps1` y ejecuta:
 
 ```powershell
 # Exportar módulos de la presentación abierta a vba-src
@@ -80,7 +80,7 @@ Abre PowerShell en la carpeta que contiene `Sync-Vba-Template.ps1`:
 .\Sync-Vba-Template.ps1
 ```
 
-También puedes pulsar **Ctrl+Shift+B** en Visual Studio Code para sincronizar. Este atajo no exporta módulos; para exportar, usa `-Export` en PowerShell.
+Después de abrir la carpeta del proyecto en Visual Studio Code, pulsa **Ctrl+Shift+B** para sincronizar. La tarea incluida solo sincroniza; para exportar módulos, usa `-Export` en PowerShell.
 
 Al exportar, el script no sobrescribe archivos fuente existentes en `vba-src`.
 
